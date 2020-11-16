@@ -23,6 +23,6 @@ before_script:
 deploy:
   stage: deploy
   script:
-    - ssh -i ~/.ssh/id_rsa -p31187 ghost@blog.stormhub.io 'sudo deploy_homepage"
+    - ssh -i ~/.ssh/id_rsa -p31187 ghost@blog.stormhub.io 'sudo deploy_homepage'
   only:
     - master
