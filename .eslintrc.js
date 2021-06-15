@@ -14,6 +14,21 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error', {
+        devDependencies: true,
+      },
+    ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     // We will use TypeScript's types for component props instead
     'react/prop-types': 'off',
     // No need to import React when using Next.js
@@ -23,5 +38,12 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
     // Why would you want unused vars?
     '@typescript-eslint/no-unused-vars': ['error'],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: '.',
+      },
+    },
   },
 };
