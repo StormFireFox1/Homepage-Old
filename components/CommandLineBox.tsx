@@ -36,7 +36,7 @@ const stuffImGoodAt = [
 ];
 
 const CommandLineBox = () => {
-  const [content, setContent] = useState('_');
+  const [content, setContent] = useState('');
   const [previousContent, setPreviousContent] = useState('');
 
   const shuffleContent = () => {
@@ -64,7 +64,7 @@ const CommandLineBox = () => {
   );
 
   return (
-    <span className="bg-white w-80 py-2 px-2 mx-2 inline-block text-black">
+    <span className="bg-white w-80 py-2 px-2 inline-block text-black">
       <InfiniteTyping />
     </span>
   );

@@ -2,25 +2,32 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Head from 'next/head';
 import Link from 'next/link';
 import { faCalendar, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import { ArrowDownIcon } from '@heroicons/react/solid';
+import { DateTime } from 'luxon';
+import AboutMe from 'components/AboutMe';
 import SplashLink from 'components/SplashLink';
 import CommandLineBox from 'components/CommandLineBox';
+import { useRef } from 'react';
 
 export default function Home() {
+  const aboutMeRef = useRef(null);
+  const scrollToAboutMe = () => {
+    aboutMeRef.current.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
   return (
-    <div>
+    <>
       <Head>
         <title>ツ</title>
-        <meta name="description" content="A personal webpage. Now in Next.js, because why not." />
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" />
       </Head>
-      <div className="w-screen h-screen overflow-hidden relative flex justify-center items-center bg-gradient-to-t from-blue-500 to-green-400 text-white font-exo">
+      <header className="w-screen h-screen overflow-hidden relative flex flex-col justify-center items-center bg-gradient-to-t from-blue-500 to-green-400 text-white font-exo p-8">
         <div className="text-lg">
           <h1 className="text-4xl font-semibold"> Hi, I&apos;m Matei.</h1>
           <p className="text-lg py-5">
             I&apos;m a developer.
             {' '}
-            <Link href="Resume.pdf"><a>Here&apos;s my resume.</a></Link>
+            <Link href="/Resume.pdf"><a>Here&apos;s my resume.</a></Link>
           </p>
           <p>
             I&apos;m also pretty good at
@@ -39,7 +46,7 @@ export default function Home() {
           />
           <SplashLink
             icon={faKey}
-            url="Storm_FireFox1.asc"
+            url="/Storm_FireFox1.asc"
             entry="GPG key for the win"
           />
           <SplashLink
@@ -48,8 +55,9 @@ export default function Home() {
             entry="Want to meet up? Check the calendar"
           />
         </div>
-      </div>
-      <div className="w-screen h-24 overflow-hidden relative flex" />
-    </div>
+        <ArrowDownIcon className="animate-bounce w-6 h-6 relative mt-4 mb-0 cursor-pointer" onClick={scrollToAboutMe}/>
+      </header>
+      <AboutMe aboutMeRef={aboutMeRef}/>
+    </>
   );
 }
