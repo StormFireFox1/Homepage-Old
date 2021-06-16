@@ -29,11 +29,12 @@ const HeroSection = (props: HeroSectionProps) => {
             <CommandLineBox />
             <p className="block my-3"><Link href="https://github.com/StormFireFox1">
               <a>
-                <FontAwesomeIcon icon={faGithub} className="mr-1" />
+                <FontAwesomeIcon icon={faGithub} />
                 My GitHub
               </a>
             </Link>
-            <Link href="https://git.stormhub.io/Storm_FireFox1"><a className="underline ml-1">(there&apos;s also my own Git server)</a></Link>
+            {' '}
+            <Link href="https://git.stormhub.io/Storm_FireFox1"><a className="underline">(there&apos;s also my own Git server)</a></Link>
             </p>
             <SplashLink
               icon={faEnvelope}
