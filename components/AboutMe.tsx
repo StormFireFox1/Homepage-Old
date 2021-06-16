@@ -3,7 +3,7 @@ import { Ref } from "react";
 
 import Header from 'components/Header';
 import SkillCardGallery from 'components/SkillCardGallery';
-
+import ProjectCardGallery from 'components/ProjectCardGallery';
 interface AboutMeProps {
   aboutMeRef: Ref<HTMLElement>;
 }
@@ -24,6 +24,8 @@ const AboutMe = (props: AboutMeProps) => {
         <p className="py-2">Excluding computers, there are many other things I do as well, all while funneling life through my unique prism of humour and optimism.</p>
         <Header text="What I know" />
         <SkillCardGallery />
+        <Header text="What I've made" />
+        <ProjectCardGallery />
       </main>
     </>
   );
