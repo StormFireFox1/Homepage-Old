@@ -33,7 +33,7 @@ const skills: Skill[] = [
 ];
 
 const SkillCardGallery = () => (
-    <div className="flex flex-row flex-wrap">
+    <div className="flex flex-row flex-wrap gap-y-6">
         {skills.map((skill, index) => (
             <SkillCard key={`skill-${index}`} title={skill.title} content={skill.content} />
         ))}

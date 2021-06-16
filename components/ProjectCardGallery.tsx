@@ -36,7 +36,7 @@ const projects: Project[] = [
 ];
 
 const ProjectCardGallery = () => (
-    <div className="flex flex-row flex-wrap">
+    <div className="flex flex-row flex-wrap gap-y-8">
         {projects.map((project, index) => (
             <ProjectCard key={`project-${index}`} icon={project.icon} link={project.link} name={project.name} pitch={project.pitch} />
         ))}
