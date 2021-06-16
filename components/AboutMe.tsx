@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 import { Ref } from "react";
+import Link from 'next/link';
 
 import Header from 'components/Header';
 import SkillCardGallery from 'components/SkillCardGallery';
@@ -15,7 +16,7 @@ const AboutMe = (props: AboutMeProps) => {
   const age = birthday.until(DateTime.now()).length('years').toFixed(0);
   return (
     <>
-      <main ref={aboutMeRef} className="w-screen max-w-4xl min-h-screen h-24 mx-auto my-auto pt-8 max-h-96 font-exo">
+      <main ref={aboutMeRef} className="w-screen max-w-4xl min-h-screen h-24 mx-auto my-auto p-8 max-h-96 font-exo">
         <p className="pt-5">I&apos;m a {age}-year-old student at UC San Diego, and I <i>really</i> like computers. Maybe too much.</p>
         <p className="py-2">It started with video games, but evolved into spending time tinkering with computers, exploding
           transistors, and messing with Vim configs. Now I mostly spend time on actual productive side-projects
@@ -26,6 +27,17 @@ const AboutMe = (props: AboutMeProps) => {
         <SkillCardGallery />
         <Header text="What I've made" />
         <ProjectCardGallery />
+        <Header text="What I enjoy" />
+        <div className="flex flex-col flex-wrap justify-around">
+          <ul className="list-disc list-inside my-0 mx-auto">
+            <li>Making other people enjoy life like I do</li>
+            <li>Seeing what makes things work</li>
+            <li>Breaking old things to bring life to new ones</li>
+          </ul>
+        </div>
+        <Header text="I have a blog" />
+        <p>I know, I know! Not a big surprise, but it turns out dumping your thoughts somewhere is a great cathartic experience.
+          You can check it out <Link href="https://blog.stormhub.io"><a className="text-blue-500">here</a></Link>.</p>
       </main>
     </>
   );
