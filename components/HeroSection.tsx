@@ -20,7 +20,7 @@ const HeroSection = (props: HeroSectionProps) => {
             <p className="text-lg py-5">
               I&apos;m a developer.
               {' '}
-              <Link href="/Resume.pdf"><a>Here&apos;s my resume.</a></Link>
+              <Link href="/Resume.pdf"><a className="italic">Here&apos;s my resume.</a></Link>
             </p>
             <p>
               I&apos;m also pretty good at
