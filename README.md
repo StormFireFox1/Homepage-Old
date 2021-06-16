@@ -1,7 +1,7 @@
 # Homepage
 
-A classic simple landing page written in [VanillaJS](http://vanilla-js.com/).
+A classic simple landing page written in [Next.js](http://nextjs.org/).
 
-You don't always need React.
+Because why not?
 
 Check it out [here](https://stormhub.io).
