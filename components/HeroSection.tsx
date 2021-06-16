@@ -24,9 +24,8 @@ const HeroSection = (props: HeroSectionProps) => {
             </p>
             <p>
               I&apos;m also pretty good at
-              {' '}
-              <CommandLineBox />
             </p>
+            <CommandLineBox />
             <SplashLink
               icon={faGithub}
               url="https://github.com/StormFireFox1"

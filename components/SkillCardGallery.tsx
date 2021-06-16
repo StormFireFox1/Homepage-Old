@@ -32,14 +32,12 @@ const skills: Skill[] = [
     },
 ];
 
-const SkillCardGallery = () => {
-    return (
-        <div className="grid grid-flow-row grid-rows-2 grid-cols-3">
-            {skills.map((skill, index) => (
-                <SkillCard key={`skill-${index}`} title={skill.title} content={skill.content} />
-            ))}
-        </div>
-    )
-};
+const SkillCardGallery = () => (
+    <div className="grid grid-flow-row grid-rows-2 grid-cols-3">
+        {skills.map((skill, index) => (
+            <SkillCard key={`skill-${index}`} title={skill.title} content={skill.content} />
+        ))}
+    </div>
+);
 
 export default SkillCardGallery;
