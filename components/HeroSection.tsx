@@ -14,7 +14,7 @@ interface HeroSectionProps {
 const HeroSection = (props: HeroSectionProps) => {
     const { scrollFunc } = props;
     return (
-    <header className="w-screen h-screen overflow-hidden relative flex flex-col justify-center items-center bg-gradient-to-t from-blue-500 to-green-400 text-white font-exo p-8">
+    <header className="h-screen overflow-hidden relative flex flex-col justify-center items-center bg-gradient-to-t from-blue-500 to-green-400 text-white font-exo p-8">
         <div className="text-lg">
             <h1 className="text-4xl font-semibold"> Hi, I&apos;m Matei.</h1>
             <p className="text-lg py-5">
