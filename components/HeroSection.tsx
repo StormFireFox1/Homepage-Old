@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGit, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCalendar, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ArrowDownIcon } from '@heroicons/react/solid';
 
 import SplashLink from 'components/SplashLink';
@@ -26,11 +27,13 @@ const HeroSection = (props: HeroSectionProps) => {
               I&apos;m also pretty good at
             </p>
             <CommandLineBox />
-            <SplashLink
-              icon={faGithub}
-              url="https://github.com/StormFireFox1"
-              entry="My GitHub (there's also my own Git server)"
-            />
+            <p className="block my-3"><Link href="https://github.com/StormFireFox1">
+              <a>
+                <FontAwesomeIcon icon={faGithub} className="mr-1" />
+                My GitHub <Link href="https://git.stormhub.io/Storm_FireFox1"><a className="italic">(there&apos;s also my own Git server)</a></Link>
+              </a>
+            </Link>
+            </p>
             <SplashLink
               icon={faEnvelope}
               url="mailto:matei@gard.us"
