@@ -9,8 +9,8 @@ const Header = (props: HeaderProps) => {
 
     return (
         <h1 className="flex justify-center font-bold text-3xl">
-            {words.join(' ')}&nbsp;
-            <span className="text-blue-500">{lastWord}</span>
+            {words.join(' ')}
+            <span className="ml-2 text-blue-500">{lastWord}</span>
         </h1>
     )
 }

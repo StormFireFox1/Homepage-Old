@@ -5,9 +5,10 @@ import { ArrowDownIcon } from '@heroicons/react/solid';
 
 import SplashLink from 'components/SplashLink';
 import CommandLineBox from 'components/CommandLineBox';
+import { MouseEventHandler } from 'react';
 
 interface HeroSectionProps {
-    scrollFunc: Function;
+    scrollFunc: MouseEventHandler<SVGSVGElement>;
 }
 
 const HeroSection = (props: HeroSectionProps) => {
