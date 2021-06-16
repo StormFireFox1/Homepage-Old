@@ -21,7 +21,7 @@ const HeroSection = (props: HeroSectionProps) => {
             <p className="text-lg py-5">
               I&apos;m a developer.
               {' '}
-              <Link href="/Resume.pdf"><a className="italic">Here&apos;s my resume.</a></Link>
+              <Link href="/Resume.pdf"><a className="underline">Here&apos;s my resume.</a></Link>
             </p>
             <p>
               I&apos;m also pretty good at
@@ -30,9 +30,10 @@ const HeroSection = (props: HeroSectionProps) => {
             <p className="block my-3"><Link href="https://github.com/StormFireFox1">
               <a>
                 <FontAwesomeIcon icon={faGithub} className="mr-1" />
-                My GitHub <Link href="https://git.stormhub.io/Storm_FireFox1"><a className="italic">(there&apos;s also my own Git server)</a></Link>
+                My GitHub
               </a>
             </Link>
+            <Link href="https://git.stormhub.io/Storm_FireFox1"><a className="underline ml-1">(there&apos;s also my own Git server)</a></Link>
             </p>
             <SplashLink
               icon={faEnvelope}
