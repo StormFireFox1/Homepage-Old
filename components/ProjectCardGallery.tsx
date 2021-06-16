@@ -36,7 +36,7 @@ const projects: Project[] = [
 ];
 
 const ProjectCardGallery = () => (
-    <div className="grid grid-flow-row grid-rows-2 gap-x-8 grid-cols-2">
+    <div className="flex flex-row flex-wrap">
         {projects.map((project, index) => (
             <ProjectCard key={`project-${index}`} icon={project.icon} link={project.link} name={project.name} pitch={project.pitch} />
         ))}
