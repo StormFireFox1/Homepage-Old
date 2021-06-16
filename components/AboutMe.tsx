@@ -16,7 +16,7 @@ const AboutMe = (props: AboutMeProps) => {
   const age = birthday.until(DateTime.now()).length('years').toFixed(0);
   return (
     <>
-      <main ref={aboutMeRef} className="w-screen max-w-4xl min-h-screen h-24 mx-auto my-auto p-8 max-h-96 font-exo">
+      <main ref={aboutMeRef} className="w-screen max-w-4xl min-h-screen mx-auto my-auto p-8 pb-24 font-exo">
         <p className="pt-5">I&apos;m a {age}-year-old student at UC San Diego, and I <i>really</i> like computers. Maybe too much.</p>
         <p className="py-2">It started with video games, but evolved into spending time tinkering with computers, exploding
           transistors, and messing with Vim configs. Now I mostly spend time on actual productive side-projects
