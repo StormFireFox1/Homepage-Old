@@ -13,7 +13,7 @@ const AboutMe = (props: AboutMeProps) => {
   const { aboutMeRef } = props;
   const birthday = DateTime.fromISO('2001-02-27T09:00:00.000');
   // toFixed truncates decimal digits from number.
-  const age = birthday.until(DateTime.now()).length('years').toFixed(0);
+  const age = Math.floor(birthday.until(DateTime.now()).length('years'));
   return (
     <>
       <main ref={aboutMeRef} className="w-screen max-w-4xl min-h-screen mx-auto my-auto p-8 pb-24 font-exo">
