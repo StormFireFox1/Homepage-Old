@@ -1,28 +1,20 @@
----
-# Latest Hugo image
-image: alpine:latest
-
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
+image: node
 
 before_script:
-  # Install SSH
-  - apk update
-  - apk add openssh
-  ##
-  ## Create the SSH directory and give it the right permissions
-  ##
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
+  - yarn --frozen-lockfile install
 
-  ## Add the SSH private key and host key
-  - ssh-keyscan -p 31187 blog.stormhub.io >> ~/.ssh/known_hosts
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-  - chmod 600 ~/.ssh/id_rsa
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .next/cache/
 
-deploy:
-  stage: deploy
+pages:
   script:
-    - ssh -i ~/.ssh/id_rsa -p31187 ghost@blog.stormhub.io 'sudo deploy_homepage'
+    - yarn build && yarn export
+    - mv out public
+  artifacts:
+    paths:
+      - public
   only:
     - master
