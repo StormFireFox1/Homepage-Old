@@ -10,9 +10,16 @@ cache:
     - .next/cache/
 
 pages:
+  before_script:
+    # Clean public folder
+    - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
+    - find public -type f -name "*.html" | xargs rm -rf
   script:
-    - yarn build && yarn export
-    - mv out public
+    - yarn export
+    - mv out/* public
+  after_script:
+    # Cleanup
+    - rm -rf out
   artifacts:
     paths:
       - public
