@@ -18,6 +18,7 @@ class MyDocument extends Document {
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
             <link rel="manifest" href="/site.webmanifest" />
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d55b5b" />
+	    <script async defer data-domain="stormhub.io" src="https://analytics.stormhub.io/js/plausible.js"></script>
             <meta name="msapplication-TileColor" content="#b91d47" />
             <meta name="theme-color" content="#ff0000" />
         </Head>
