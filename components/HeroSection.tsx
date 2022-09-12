@@ -48,8 +48,8 @@ const HeroSection = (props: HeroSectionProps) => {
             />
             <SplashLink
               icon={faCalendar}
-              url="/calendar"
-              entry="Want to meet up? Check the calendar"
+              url="https://calendly.com/storm_firefox1/30min"
+              entry="Want to meet up? Hit me up on Calendly"
             />
         </div>
         <ArrowDownIcon className="animate-bounce w-6 h-6 relative mt-4 mb-0 cursor-pointer" onClick={scrollFunc}/>
